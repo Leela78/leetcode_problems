@@ -1,4 +1,5 @@
 class Solution:
+    # Updated: Dec 30, 2025
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
                 # Use a hash map to store value and its index
