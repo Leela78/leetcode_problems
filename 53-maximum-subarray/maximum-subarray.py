@@ -3,7 +3,7 @@ class Solution:
         max_sum=nums[0]
         sum=0
         n=len(nums)
-        for j in range(len(nums)):
+        for j in range(n):
                 sum  +=nums[j]
                 max_sum=max(max_sum,sum)
                 if sum < 0:
