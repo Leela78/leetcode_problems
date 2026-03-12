@@ -4,7 +4,10 @@ class Solution:
         for i in tokens:
             if i not in '+-*/':
                 stack.append(int(i))
-            else:
+            else: 
+                if len(stack)< 2:
+                    raise ValueError("reverse polish notation expression is invalid")   
+
                 second=stack.pop()
                 first=stack.pop()
                 if i == '+':
