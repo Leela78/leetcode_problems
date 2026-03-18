@@ -7,7 +7,7 @@ class Solution:
             else: 
                 if len(stack)< 2:
                     raise ValueError("reverse polish notation expression is invalid")   
-
+          
                 second=stack.pop()
                 first=stack.pop()
                 if i == '+':
