@@ -1,19 +1,20 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        sign = -1 if x<0 else 1
-        x=abs(x) 
-        digit=0
-        while x > 0:
-            rem= x%10
-            digit=digit*10 +rem
+        r=0
+        num=x
+        neg=False
+        if x<0:
+            x=abs(x)
+            neg=True
+        while x>0:
+            rem=x%10
+            r=r*10+rem
             x=x//10
-        digit *=sign    
-        if digit < -2 **31-1 or digit > 2**31-1:
+        if neg:
+            r= -r 
+        if r < -(2**31) or r>(2**31):
             return 0
         else:
-            return digit
-
- 
-
-            
-            
+            return r    
+              
+        
