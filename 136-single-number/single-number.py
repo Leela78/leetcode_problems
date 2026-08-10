@@ -1,8 +1,12 @@
 from typing import List
-
+from collections import Counter
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        res = 0
-        for num in nums:
-            res= res^num
-        return res
+        count=Counter(nums)
+        for key,cou in count.items():
+            if cou==1:
+                return key
+                
+
+
+     
