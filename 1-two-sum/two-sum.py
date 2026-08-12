@@ -1,13 +1,11 @@
 class Solution:
-    # Updated: Dec 30, 2025
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hash={}
+        n=len(nums)
+        for i in range(n):
+            compliment =target-nums[i]
+            if compliment in hash:
+                return [hash[compliment],i]
+            hash[nums[i]]=i
+                
 
-                # Use a hash map to store value and its index
-        num_map = {}
-        for i, num in enumerate(nums):
-            complement = target - num
-            if complement in num_map:
-                return [num_map[complement], i]
-            num_map[num] = i
-        return []
-        
