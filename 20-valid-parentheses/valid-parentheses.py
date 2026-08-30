@@ -4,9 +4,9 @@ class Solution:
         pairs = {')': '(', '}': '{', ']': '['}
 
         for ch in s:
-            if ch in pairs.values():      # opening bracket
+            if ch in pairs.values():     
                 stack.append(ch)
-            else:                         # closing bracket
+            else:                         
                 if not stack or stack.pop() != pairs[ch]:
                     return False
 
